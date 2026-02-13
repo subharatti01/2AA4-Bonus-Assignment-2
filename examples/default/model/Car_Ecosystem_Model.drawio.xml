@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.7">
+  <diagram name="Page-1" id="-eBc8EggiMhm8OXjxCS4">
+    <mxGraphModel dx="1042" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="COszGqUp5sM12ANoOrQQ-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Person" vertex="1">
+          <mxGeometry height="40" width="120" x="50" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Driver" vertex="1">
+          <mxGeometry height="40" width="120" x="50" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Mechanic" vertex="1">
+          <mxGeometry height="40" width="120" x="210" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Car" vertex="1">
+          <mxGeometry height="40" width="120" x="400" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Engine" vertex="1">
+          <mxGeometry height="40" width="120" x="400" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Wheel" vertex="1">
+          <mxGeometry height="40" width="120" x="620" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LicencePlate" vertex="1">
+          <mxGeometry height="40" width="120" x="510" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Registration" vertex="1">
+          <mxGeometry height="40" width="140" x="620" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="InsurancePolicy" vertex="1">
+          <mxGeometry height="40" width="160" x="760" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Garage" vertex="1">
+          <mxGeometry height="40" width="120" x="354" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-11" edge="1" parent="1" source="COszGqUp5sM12ANoOrQQ-2" style="endArrow=block;endFill=0;" target="COszGqUp5sM12ANoOrQQ-1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-12" edge="1" parent="1" source="COszGqUp5sM12ANoOrQQ-3" style="endArrow=block;endFill=0;" target="COszGqUp5sM12ANoOrQQ-1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-13" edge="1" parent="1" source="COszGqUp5sM12ANoOrQQ-2" style="endArrow=classic;" target="COszGqUp5sM12ANoOrQQ-4" value="drives(1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-14" edge="1" parent="1" source="COszGqUp5sM12ANoOrQQ-3" style="endArrow=classic;" target="COszGqUp5sM12ANoOrQQ-4" value="repairs(N)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-15" edge="1" parent="1" source="COszGqUp5sM12ANoOrQQ-4" style="endArrow=classic;" target="COszGqUp5sM12ANoOrQQ-5" value="has(1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-16" edge="1" parent="1" source="COszGqUp5sM12ANoOrQQ-4" style="endArrow=classic;" target="COszGqUp5sM12ANoOrQQ-6" value="has(4)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-17" edge="1" parent="1" source="COszGqUp5sM12ANoOrQQ-4" style="endArrow=classic;" target="COszGqUp5sM12ANoOrQQ-7" value="has(1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-18" edge="1" parent="1" source="COszGqUp5sM12ANoOrQQ-4" style="endArrow=classic;" target="COszGqUp5sM12ANoOrQQ-8" value="has(1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-19" edge="1" parent="1" source="COszGqUp5sM12ANoOrQQ-4" style="endArrow=classic;" target="COszGqUp5sM12ANoOrQQ-9" value="has(1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="COszGqUp5sM12ANoOrQQ-20" edge="1" parent="1" source="COszGqUp5sM12ANoOrQQ-10" style="endArrow=classic;" target="COszGqUp5sM12ANoOrQQ-4" value="stores(N)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
