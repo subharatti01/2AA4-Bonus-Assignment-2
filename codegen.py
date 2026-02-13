@@ -56,3 +56,19 @@ def get_parts(label): #split the labels on arrows
         return first, number
     else:
         return None, None
+
+for thing_id in things: #make java files and write to them
+
+    thing_name = things[thing_id]
+    super_class = None
+
+    for spec in specializations: #superclass 
+        if spec[0] == thing_id:
+            parent_id = spec[1]
+            super_class = things.get(parent_id)
+
+    file_path = os.path.join(output_folder, thing_name + ".java")
+    file = open(file_path, "w")
+
+    needs_list = False
+    field_lines = []
