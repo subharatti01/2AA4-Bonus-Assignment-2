@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.8">
+  <diagram name="Library System Model" id="MnfiXxZT-kZUVXl7D2fq">
+    <mxGraphModel dx="1042" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="U0eEakecytrOY20W176r-1" parent="1" value="Person" vertex="1">
+          <mxGeometry height="40" width="120" x="50" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-2" parent="1" value="Member" vertex="1">
+          <mxGeometry height="40" width="120" x="50" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-3" parent="1" value="Librarian" vertex="1">
+          <mxGeometry height="40" width="120" x="200" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-4" parent="1" value="Book" vertex="1">
+          <mxGeometry height="40" width="120" x="400" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-5" parent="1" value="Author" vertex="1">
+          <mxGeometry height="40" width="120" x="650" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-6" parent="1" value="Loan" vertex="1">
+          <mxGeometry height="40" width="120" x="670" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-7" parent="1" value="Library" vertex="1">
+          <mxGeometry height="40" width="120" x="310" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-8" parent="1" value="Shelf" vertex="1">
+          <mxGeometry height="40" width="120" x="650" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-9" parent="1" value="Publisher" vertex="1">
+          <mxGeometry height="40" width="140" x="850" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-10" edge="1" parent="1" source="U0eEakecytrOY20W176r-2" style="endArrow=block;endFill=0;" target="U0eEakecytrOY20W176r-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-11" edge="1" parent="1" source="U0eEakecytrOY20W176r-3" style="endArrow=block;endFill=0;" target="U0eEakecytrOY20W176r-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-12" edge="1" parent="1" source="U0eEakecytrOY20W176r-2" style="endArrow=classic;" target="U0eEakecytrOY20W176r-6" value="borrows(N)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-13" edge="1" parent="1" source="U0eEakecytrOY20W176r-6" style="endArrow=classic;" target="U0eEakecytrOY20W176r-4" value="contains(1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-14" edge="1" parent="1" source="U0eEakecytrOY20W176r-4" style="endArrow=classic;" target="U0eEakecytrOY20W176r-5" value="writtenBy(1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-15" edge="1" parent="1" source="U0eEakecytrOY20W176r-4" style="endArrow=classic;" target="U0eEakecytrOY20W176r-9" value="publishedBy(1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-16" edge="1" parent="1" source="U0eEakecytrOY20W176r-7" style="endArrow=classic;" target="U0eEakecytrOY20W176r-4" value="has(N)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-17" edge="1" parent="1" source="U0eEakecytrOY20W176r-7" style="endArrow=classic;" target="U0eEakecytrOY20W176r-3" value="employs(N)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-18" edge="1" parent="1" source="U0eEakecytrOY20W176r-7" style="endArrow=classic;" target="U0eEakecytrOY20W176r-8" value="has(N)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U0eEakecytrOY20W176r-19" edge="1" parent="1" source="U0eEakecytrOY20W176r-8" style="endArrow=classic;" target="U0eEakecytrOY20W176r-4" value="stores(N)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
