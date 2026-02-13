@@ -72,3 +72,25 @@ for thing_id in things: #make java files and write to them
 
     needs_list = False
     field_lines = []
+
+    for rel in relationships: #check the relationship type
+        source = rel[0]
+        target = rel[1]
+        label = rel[2] #spliting up cardinality, owner class, and suppplier class
+
+        if source == thing_id:
+
+            rel_name, card = get_parts(label) #break into cardinality and relation
+
+            if rel_name is not None: #if theres a relation
+                target_name = things.get(target)
+
+                variable_name = rel_name + "_" + target_name.lower()
+
+                if card == "1":
+                    line = "    private " + target_name + " " + variable_name + ";" #add line that created private instance variable to file
+                    field_lines.append(line)
+                else:
+                    line = "    private java.util.List<" + target_name + "> " + variable_name + ";" #add line that creates private java list to file
+                    field_lines.append(line)
+                    needs_list = True
