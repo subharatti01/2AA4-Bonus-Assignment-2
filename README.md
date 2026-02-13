@@ -8,4 +8,4 @@ The generator:
 - Takes a draw.io XML model as input
 - Splits up its entities, relationships, and specializations
 - Generates corresponding Java classes
-- Uses simple `Main.java` client to test
+- Uses simple client code to test
