@@ -94,3 +94,16 @@ for thing_id in things: #make java files and write to them
                     line = "    private java.util.List<" + target_name + "> " + variable_name + ";" #add line that creates private java list to file
                     field_lines.append(line)
                     needs_list = True
+    if needs_list: #writing to java file
+        file.write("import java.util.List;\n\n") #list for multiple cardinality
+
+    if super_class is not None:
+        file.write("public class " + thing_name + " extends " + super_class + " {\n\n") #inhertiance
+    else:
+        file.write("public class " + thing_name + " {\n\n") #associatation
+
+    for line in field_lines:
+        file.write(line + "\n") #new line after for organization
+
+    file.write("\n}")
+    file.close()
