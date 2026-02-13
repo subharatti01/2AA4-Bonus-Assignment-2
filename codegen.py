@@ -47,3 +47,12 @@ for cell in root.iter("mxCell"): #available in the xml element tree library, so 
             specializations.append([source, target])
         else:
             relationships.append([source, target, label])
+
+def get_parts(label): #split the labels on arrows
+    if "(" in label and ")" in label:
+        first = label.split("(")[0]
+        second = label.split("(")[1]
+        number = second.replace(")", "")
+        return first, number
+    else:
+        return None, None
