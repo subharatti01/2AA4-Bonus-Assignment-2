@@ -17,4 +17,4 @@ root = tree.getroot() #parsing xml
 
 things = {}
 relationships = []
-specializations = []
+specializations = [] #hold translation semantic results
