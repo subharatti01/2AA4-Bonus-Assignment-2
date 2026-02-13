@@ -1,0 +1,1 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=subharatti01_2AA4-Bonus-Assignment-2&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=subharatti01_2AA4-Bonus-Assignment-2)
