@@ -1,6 +1,6 @@
 import os
 import sys
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ET #python library that represents XML as a tree structure
 
 if len(sys.argv) != 3:
     print("give input file and output folder") #folder not given
@@ -16,8 +16,8 @@ tree = ET.parse(input_file)
 root = tree.getroot() #parsing xml
 
 things = {}
-relationships = []
-specializations = [] #hold translation semantic results
+associations = []
+inheritance = [] #hold translation semantic results
 
 for cell in root.iter("mxCell"): #available in the xml element tree library, so go thru every cell
 
@@ -44,9 +44,9 @@ for cell in root.iter("mxCell"): #available in the xml element tree library, so 
             style = ""
 
         if "endArrow=block" in style: #checks if its inheritance
-            specializations.append([source, target])
+            inheritance.append([source, target])
         else:
-            relationships.append([source, target, label])
+            associations.append([source, target, label])
 
 def get_parts(label): #split the labels on arrows
     if "(" in label and ")" in label:
@@ -62,7 +62,7 @@ for thing_id in things: #make java files and write to them
     thing_name = things[thing_id]
     super_class = None
 
-    for spec in specializations: #superclass 
+    for spec in inheritance: #superclass 
         if spec[0] == thing_id:
             parent_id = spec[1]
             super_class = things.get(parent_id)
@@ -73,7 +73,7 @@ for thing_id in things: #make java files and write to them
     needs_list = False
     field_lines = []
 
-    for rel in relationships: #check the relationship type
+    for rel in associations: #check the relationship type
         source = rel[0]
         target = rel[1]
         label = rel[2] #spliting up cardinality, owner class, and suppplier class
@@ -94,6 +94,7 @@ for thing_id in things: #make java files and write to them
                     line = "    private java.util.List<" + target_name + "> " + variable_name + ";" #add line that creates private java list to file
                     field_lines.append(line)
                     needs_list = True
+                    
     if needs_list: #writing to java file
         file.write("import java.util.List;\n\n") #list for multiple cardinality
 
